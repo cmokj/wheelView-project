@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/cmokj/wheelView-project/issues"
   },
-  "homepage": "https://github.com/cmokj/wheelView-project#readme"
+  "homepage": "https://github.com/cmokj/wheelView-project#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
