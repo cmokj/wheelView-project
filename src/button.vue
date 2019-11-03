@@ -1,8 +1,6 @@
 <template>
     <button class="g-button" v-bind:class="`icon-${iconPosition}`">
-        <svg class="icon" aria-hidden="true" v-if="icon">
-            <use v-bind:xlink:href="`#i-${icon}`"></use>
-        </svg>
+        <g-icon v-if="icon" v-bind:icon-name="icon"></g-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -52,11 +50,6 @@
 
         &:focus {
             outline: none;
-        }
-
-        > svg {
-            width: 1em;
-            height: 1em;
         }
 
         > .icon {
