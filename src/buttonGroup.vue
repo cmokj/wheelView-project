@@ -5,7 +5,15 @@
 </template>
 
 <script>
-
+    export default {
+        mounted() {
+            for(let node of this.$el.children) {
+                if(node.nodeName !== 'BUTTON') {
+                    console.log("g-button-group 的子元素建议该为 button 元素，否则会有样式错误。")
+                }
+            }
+        }
+    }
 </script>
 
 <style lang="scss">
