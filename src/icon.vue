@@ -1,5 +1,5 @@
 <template>
-    <svg aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
         <use v-bind:xlink:href="`#i-${iconName}`"></use>
     </svg>
 </template>
