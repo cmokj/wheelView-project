@@ -27,5 +27,7 @@ const expect = chai.expect;
     }).$mount();
     let useElement = button.$el.querySelector('use');
     let href = useElement.getAttribute('xlink:href');
-    expect(href).to.eq('#i-settings')
+    expect(href).to.eq('#i-settings');
+    button.$el.remove();
+    button.$destroy();
 }
