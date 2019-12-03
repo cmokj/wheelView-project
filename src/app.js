@@ -49,7 +49,7 @@ const expect = chai.expect;
 }
 {
     const Constructor = Vue.extend(Button);
-    const button = new Constructor({
+    const vm = new Constructor({
         propsData: {
             icon: 'settings'
         }
