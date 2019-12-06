@@ -3,7 +3,9 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        name: 'GuluInput'
+    }
 </script>
 
 <style lang="scss"></style>
