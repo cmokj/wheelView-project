@@ -11,7 +11,7 @@
     };
 </script>
 
-<style>
+<style lang="scss">
     svg {
         width: 1em;
         height: 1em;
