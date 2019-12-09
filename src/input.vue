@@ -1,6 +1,7 @@
 <template>
     <div class="wrapper" :class="{'error': error}">
-        <input v-bind:value="value" v-bind:disabled="disabled" v-bind:readonly="readonly">
+        <input v-bind:value="value" v-bind:disabled="disabled" v-bind:readonly="readonly"
+        @change="$emit('change',$event)" @input="$emit('input',$event)" @focus="$emit('focus',$event)" @blur="$emit('blur',$event)">
         <template v-if="error">
             <g-icon icon-name="error" class="iconError"></g-icon>
             <span class="errorMessage">{{error}}</span>
