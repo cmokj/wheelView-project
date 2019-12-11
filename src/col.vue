@@ -1,6 +1,9 @@
 <template>
-    <div class="col" v-bind:class="[`col-${span}`,offset && `offset-${offset}`]">
-        <slot></slot>
+    <div class="col" v-bind:class="[span && `col-${span}`,offset && `offset-${offset}`]"
+    v-bind:style="{paddingLeft: gutter/2 + 'px', paddingRight: gutter/2 + 'px'}">
+        <div style="border: 1px solid green;height: 100px">
+            <slot></slot>
+        </div>
     </div>
 </template>
 <script>
@@ -13,15 +16,17 @@
             offset: {
                 type: [Number,String]
             }
+        },
+        data() {
+            return {
+                gutter: 0
+            }
         }
     }
 </script>
 <style lang="scss" scoped>
     .col {
-        height: 100px;
         width: 50%;
-        background: #ccc;
-        border: 1px solid blue;
 
         $class-prefix: col-;
         @for $n from 1 through 24 {
